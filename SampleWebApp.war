@@ -1,0 +1,198 @@
+PK
+    X™QN            	  META-INF/˛   PK
+    W™QNßéÈ*h   h      META-INF/MANIFEST.MFManifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_152-b16 (Oracle Corporation)
+
+PK
+    W™QN               WEB-INF/PK
+    W™QN               WEB-INF/classes/PK
+    W™QN               WEB-INF/classes/com/PK
+    W™QN            (   WEB-INF/classes/com/middlewareinventory/PK
+    W™QN•†dG   G      META-INF/context.xml<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/SampleWebApp"/>
+PK
+    W™QNô©>á    :   WEB-INF/classes/com/middlewareinventory/SnoopServlet.class ˛∫æ   4 R
+  / 0 1 2 1 3 4 5 6 7 8
+ 9 : ;
+ 	 <
+  = > ? @ <init> ()V Code LineNumberTable LocalVariableTable this &Lcom/middlewareinventory/SnoopServlet; processRequest R(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V view !Ljavax/servlet/RequestDispatcher; out Ljava/io/PrintWriter; request 'Ljavax/servlet/http/HttpServletRequest; response (Ljavax/servlet/http/HttpServletResponse; StackMapTable ? A B C ; 
+Exceptions D E doGet doPost getServletInfo ()Ljava/lang/String; 
+SourceFile SnoopServlet.java   text/html;charset=UTF-8 B F G H I welcome.jsp A J K L M N C O  java/lang/Throwable P Q   Short description $com/middlewareinventory/SnoopServlet javax/servlet/http/HttpServlet %javax/servlet/http/HttpServletRequest &javax/servlet/http/HttpServletResponse java/io/PrintWriter javax/servlet/ServletException java/io/IOException setContentType (Ljava/lang/String;)V 	getWriter ()Ljava/io/PrintWriter; getRequestDispatcher 5(Ljava/lang/String;)Ljavax/servlet/RequestDispatcher; javax/servlet/RequestDispatcher forward @(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;)V close addSuppressed (Ljava/lang/Throwable;)V !               /     *∑ ±                              ©     ê,π  ,π  ::+π  :+,π  ∂ ß :∂ ø∆ U∆ ∂ ß H:∂ 
+ß <∂ ß 4::ø:	∆ !∆ ∂ ß :
+
+∂ 
+ß ∂ 	ø±   & .   . 0 .   B G J 	  8 ^ 	  8 g   s x { 	 ^ i g       2    %  &  (  ) & , + - . , 5 - 8 . ^ & g . è 0    4   	           ê       ê      ê        ] 
+ˇ .  ! " #   $ %  %	Q %G %H %ˇ  
+ ! " #   $ %   %  %ˇ   ! " #   &     ' (  )      I     *+,∂ ±       
+    ?  @                          &     ' (  *      I     *+,∂ ±       
+    M  N                          &     ' (  + ,     -     ∞           W              -    .PK
+    W™QNkíÊ–∞  ∞     WEB-INF/web.xml<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>SnoopServlet</servlet-name>
+        <servlet-class>com.middlewareinventory.SnoopServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SnoopServlet</servlet-name>
+        <url-pattern>/SnoopServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
+PK
+    W™QN§q)E8  8     WEB-INF/weblogic.xml<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.8/weblogic-web-app.xsd">
+  <jsp-descriptor>
+    <keepgenerated>true</keepgenerated>
+    <debug>true</debug>
+  </jsp-descriptor>
+  <context-root>/SampleWebApp</context-root>
+</weblogic-web-app>
+PK
+    W™QN„ä6!E  E  
+   index.html<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SampleWebApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Sample Web Application To Deploy and Test</h2>
+        <br>
+    <div> click <a href="SnoopServlet">Click to Invoke a SnoopServlet</a></div>
+    <br>
+    <br>
+    
+    
+    </body>
+</html>
+PK
+    W™QNkmÁ       welcome.jsp<%-- 
+    Document   : welcome
+    Created on : 23 Jul, 2018, 5:39:03 AM
+    Author     : aksarav
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="java.net.InetAddress" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+        <title>Sample Web Application  - SnoopServlet</title>
+        <style>
+            body{
+                font-family: 'Open Sans', sans-serif;
+            }
+            table,td,tr{
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            span{
+                font-weight: normal;
+                font-size: 16px;
+                color: black;
+            }
+            </style>
+    </head>
+    <body>
+        
+        <%
+            String hostName;
+            String serverName;
+            Date Time;
+            String Dtime;
+            hostName = InetAddress.getLocalHost().getHostName()+" with IP="+InetAddress.getLocalHost().getHostAddress()+" ";
+            serverName = System.getProperty("weblogic.Name");
+            Time = new Date();
+            Dtime = Time.toString();
+            %>
+        
+        <h2> This is a Sample Web Application - Snoop Servlet  </h2>
+        <hr>
+        
+         <div>
+            <h4>Host Name & IP Address: <span><%=  hostName %></span></h4>
+            <h4>JVM Name: <span><%=  serverName %></span></h4>
+            <h4> Date & Time: <span> <%= Dtime %> </h4>
+        </div>
+        
+        <h4>HTTP Request URL : <span><%= request.getRequestURL() %></span></h4>
+        <h4>HTTP Request Method : <span><%= request.getMethod() %></span></h4>
+ 
+        <h4>HTTP Request Headers Received</h4>
+        
+        <table>
+            <% 
+                Enumeration enumeration = request.getHeaderNames(); 
+                while (enumeration.hasMoreElements()) 
+                 { 
+                  String name=(String) 
+                  enumeration.nextElement(); 
+                  String value = request.getHeader(name);
+              %>
+                <tr>
+                    <td>
+                        <%=name %>
+                    </td>
+                    <td>
+                        <%=value %>
+                    </td>
+                </tr>
+             <% } %>
+        </table>
+        
+        <h4>HTTP Cookies Received</h4>
+           
+          <table>
+               <%
+            
+            Cookie[] arr1= request.getCookies();
+            for (int i=0; i < arr1.length; i++)
+            {
+                String cookiename = arr1[i].getName();
+                String cookievalue = arr1[i].getValue();
+            
+            %>
+                <tr>
+                    <td>
+                        <%=cookiename %>
+                    </td>
+                    <td>
+                        <%=cookievalue %>
+                    </td>
+                </tr>
+             <% } %>
+        </table>  
+            
+        
+</body>
+</html>
+PK
+    X™QN            	         ÌA    META-INF/˛   PK
+    W™QNßéÈ*h   h              §Å+   META-INF/MANIFEST.MFPK
+    W™QN                      ÌA≈   WEB-INF/PK
+    W™QN                      ÌAÎ   WEB-INF/classes/PK
+    W™QN                      ÌA  WEB-INF/classes/com/PK
+    W™QN            (          ÌAK  WEB-INF/classes/com/middlewareinventory/PK
+    W™QN•†dG   G              §Åë  META-INF/context.xmlPK
+    W™QNô©>á    :           §Å
+  WEB-INF/classes/com/middlewareinventory/SnoopServlet.classPK
+    W™QNkíÊ–∞  ∞             §Å{
+  WEB-INF/web.xmlPK
+    W™QN§q)E8  8             §ÅX  WEB-INF/weblogic.xmlPK
+    W™QN„ä6!E  E  
+           §Å¬  index.htmlPK
+    W™QNkmÁ               §Å/  welcome.jspPK      #  q    
